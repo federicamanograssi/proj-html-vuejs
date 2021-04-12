@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.debug header,
+body.debug main,
+body.debug footer
+{
+    border: 1px solid grey;
+    background-color: pink;
+}
+
+body.debug .wrapped-container{
+    background-color: yellow;
+    border: 1px solid blue;
+}
+
+/* COMMON STRUCTURE--------------------------------------------- */
+.wrapped-container{
+    width: 80%;
+    margin:0 auto
+}
+
+.flex{
+    display: flex;
+}
+
+
+/* COMMON STYLE-------------------------------------- */
+ul.menu_inline li{
+    display: inline;
+}
+
+.text-center {
+    text-align: center;
+}
+/* ____________________________________________________________ */
+
+/* HEADER------------------ */
+header {
+    width: 100%;
+    height: 70px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header .top-header{
+    height: 100%;
+    justify-content: space-between;
+}
+header .logo_header{
+    height: 90px;
+}
+header .menu_inline{
+    align-items: center;
+}
+header .menu_inline li{
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+
+/* _____________________________________________________ */
+
+/* MAIN----------------------- */
+
+main {
+    height: 100vh;
+    background: greenyellow;
+}
+
+.jumbo_section {
+    height: 100vh;
+    margin-top: 70px;
+    background-image: url('../media/img/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    position: relative;
+}
+.jumbo_section>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+/* ___________________________________________________________ */
+footer {
+    height: 400px;
+    background: blue;
+}
