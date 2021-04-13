@@ -308,6 +308,10 @@ main>div{
     background-repeat:no-repeat;
     font-family: 'Now-Regular';
 }
+.quote_section p{
+    font-size: 30px;
+    margin: 30px 20px;
+}
 
 
 
