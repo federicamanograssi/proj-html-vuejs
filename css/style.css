@@ -120,6 +120,10 @@ a {
     display: flex;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+
 .col33{
     width: 33.33%;
 }
@@ -145,6 +149,7 @@ button {
 
 ul.menu_inline li{
     display: inline;
+    margin-right: 20px;
 }
 
 .box-shadow{
@@ -173,10 +178,6 @@ header .logo_header{
 }
 header .menu_inline{
     align-items: center;
-}
-header .menu_inline li{
-    margin-right: 15px;
-    text-decoration: none;
 }
 
 
@@ -449,16 +450,30 @@ header .menu_inline li{
 
 
 
-
-
-
-
-
-
-
-
 /* ___________________________________________________________ */
+
+/* FOOTER---------------------------- */
+
 footer {
-    height: 400px;
-    background: blue;
+    background: #192735;
+}
+
+
+
+
+footer .navigation_section h3{
+    color: white;
+}
+footer .navigation_section li{
+    color:#a3b5ca
+}
+
+
+
+
+.bottom-footer{
+   background-color: #15222e; 
+   color:#a3b5ca;
+   font-size: 13px;
+   padding: 15px 0;
 }
