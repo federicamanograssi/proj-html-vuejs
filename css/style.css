@@ -123,9 +123,15 @@ a {
 .justify-between{
     justify-content: space-between;
 }
+.justify-center{
+    justify-content: center;
+}
 
 .col33{
     width: 33.33%;
+}
+.col25{
+    width: 25%;
 }
 
 
@@ -141,10 +147,8 @@ body {
 
 button {
     background: transparent;
-    padding: 15px 25px;
     text-transform: capitalize;
-    border: 1px solid grey;
-    color: grey;
+    border: 0;
 }
 
 ul.menu_inline li{
@@ -155,6 +159,7 @@ ul.menu_inline li{
 .box-shadow{
     box-shadow: 0px 28px 65px 0px rgb(188 188 188 / 25%);
 }
+
 
 /* ____________________________________________________________ */
 
@@ -206,6 +211,12 @@ header .menu_inline{
     font-weight: 400;
     font-size: 52px;
 
+}
+.jumbo_section button{
+    padding: 15px 25px;
+    text-transform: capitalize;
+    border: 1px solid grey;
+    color: grey;
 }
 
 /* ABOUT SECTION------------------ */
@@ -456,20 +467,69 @@ header .menu_inline{
 
 footer {
     background: #192735;
+    color:#a3b5ca;
+    font-size: 14px;
+}
+footer li{
+    list-style: none;
+}
+
+/* TOP-FOOTER------------ */
+
+footer .top-footer{
+    padding: 50px 0;
+}
+footer .subscribe_box{
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0px 0px 20px 0px rgb(16 26 36 / 55%);
+}
+footer .subscribe_form{
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 40%;
+}
+footer .subscribe_form input{
+    height: 60px;
+    padding: 15px;
+    width: 300px;
+}
+footer .subscribe_form button{
+    background-color: red;
+    height: 60px;
+    padding: 23px 35px;
+    color: white;
 }
 
 
+footer .insights_picwick{
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
+/* NAVIGATION SECTION------------ */
 
 footer .navigation_section h3{
     color: white;
 }
-footer .navigation_section li{
-    color:#a3b5ca
+footer .navigation_section .navigation_column{
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.navigation_column li{
+    margin-bottom: 15px;
+}
+.navigation_column li i{
+    margin-right: 10px;
 }
 
 
 
+
+/* BOTTOM-FOOTER------------ */
 
 .bottom-footer{
    background-color: #15222e; 
