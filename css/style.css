@@ -147,6 +147,10 @@ ul.menu_inline li{
     display: inline;
 }
 
+.box-shadow{
+    box-shadow: 0px 28px 65px 0px rgb(188 188 188 / 25%);
+}
+
 /* ____________________________________________________________ */
 
 /* HEADER------------------ */
@@ -210,12 +214,11 @@ header .menu_inline li{
 }
 
 .card-info{
-    border: 1px solid black;
     flex-direction: column;
     flex-basis: 100%;
     height: 350px;
     padding: 30px;
-    box-shadow: 0px 28px 65px 0px rgb(188 188 188 / 25%);
+    
     text-align: center;
     line-height: 1.9;
 }
@@ -258,7 +261,6 @@ header .menu_inline li{
     padding: 20px;
 }
 .card_course{
-    border: 1px solid black;
     line-height: 1.9;
     flex-direction: column;
 }
@@ -308,6 +310,72 @@ header .menu_inline li{
     margin: 30px 20px;
 }
 
+
+/* _______________________________________________________________________ */
+/* EVENT SECTION */
+#events_section{
+    position: relative;
+    margin-top:5%;
+    margin-bottom: 5%;
+    /* provvisorio */
+}
+.events-video{
+    position: relative;
+    width: 650px;
+    height: 530px;
+    overflow: hidden;
+    left: 50px
+}
+.events-details{
+    position: relative;
+    background: white;
+    width: 650px;
+    height: 530px;
+    top:50px;
+    right: 50px;
+    padding: 0 50px 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.events-details  p{
+    margin-bottom: 10px;
+    /* PROVVISORIO */
+}
+.events-details i{
+    font-size: 0.8em;
+    color: inherit;
+    margin-right: 10px;
+}
+
+.events-details .upcoming_events_label{
+    justify-content: center;
+}
+.events-details .upcoming_events_label h2{
+    background: red;
+    padding:20px 40px;
+    color:white;
+}
+
+
+
+.events-video img{
+    width: 100%;
+    height: auto;
+}
+
+.events-video span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: 50%;
+}
+.events-video i{
+    margin: 25px;
+    font-size: 30px;
+    color:red;
+}
 /* ______________________________________________________________________ */
 
 /* BLOG SECTION */
@@ -316,7 +384,6 @@ header .menu_inline li{
     padding: 10px;
 }
 .card_blog{
-    border: 1px solid black;
     line-height: 1.9;
     flex-direction: column;
 }
