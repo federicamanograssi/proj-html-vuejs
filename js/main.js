@@ -22,11 +22,18 @@ var app = new Vue({
                 relatedIcon:'fas fa-phone-square-alt',
                 link:'#'
             },
-            'socialContact' : {
-                'facebook':'#',
-                'instagram':'#'
-            }
-            
+            'socials' : [
+                {
+                    socialName:'facebook',
+                    socialLink:'#',
+                    socialIcon:'fab fa-facebook-square"'
+                },
+                {
+                    socialName:'instagram',
+                    socialLink:'#',
+                    socialIcon:'fab fa-instagram-square'
+                },
+            ]            
         },
 
 
@@ -36,74 +43,110 @@ var app = new Vue({
                 pageName: 'Privacy',
                 pageLink:'#',
                 pageCategory:'legal',
+                headerMenuView:false,
+                 // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:false
+                 // TENTATIVO 02
+                footerWidget: 2
             },
             {
                 pageName: 'Terms',
                 pageLink:'#',
                 pageCategory:'legal',
+                headerMenuView:false,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:false
+                 // TENTATIVO 02
+                footerWidget: 2
+
             },
             {
                 pageName: 'Cookie Policy',
                 pageLink:'#',
                 pageCategory: 'legal',
+                headerMenuView:false,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:false
+                 // TENTATIVO 02
+                footerWidget: 3
+
             },
             {
                 pageName: 'Sitemap',
                 pageLink:'#',
                 pageCategory: 'legal',
+                headerMenuView:false,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:false
+                 // TENTATIVO 02
+                footerWidget: ''
+
             },
             {
                 pageName: 'Home',
                 pageLink:'#',
                 pageCategory: 'general',
+                headerMenuView:true,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:true
+                // TENTATIVO 02
+                footerWidget: ''
             },
             {
                 pageName: 'About',
                 pageLink:'#',
                 pageCategory: 'general',
+                headerMenuView:true,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:true
+                // TENTATIVO 02
+                footerWidget: ''
             },
             {
                 pageName: 'Academics',
                 pageLink:'#',
                 pageCategory: 'general',
+                headerMenuView:true,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:true
+                // TENTATIVO 02
+                footerWidget: ''
             },
             {
                 pageName: 'Courses',
                 pageLink:'#',
                 pageCategory: 'general',
+                headerMenuView:true,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:true
+                // TENTATIVO 02
+                footerWidget: ''
             },
             {
                 pageName: 'News',
                 pageLink:'#',
                 pageCategory: 'general',
+                headerMenuView:true,
+                // TENTATIVO 01
                 pageMenuView: true,
-                headerMenuView:true
+                // TENTATIVO 02
+                footerWidget: ''
             },
 
         ],
         headerPagesMenu:[],
+        footerWidgets:[],
         legalPagesMenu:[]
     },
     created(){
-        getCategoryPagesMenu(this.pagesList,'legal',this.legalPagesMenu),
         getHeaderPagesMenu(this.pagesList,this.headerPagesMenu)
-          
+
+        // // per tentativo 01
+        getCategoryPagesMenu(this.pagesList,'legal',this.legalPagesMenu)  
+        
+        //per tentativo 2
+        getFooterWidgetPages(this.pagesList,this.footerWidgets)
+
     }
     
 })
@@ -119,6 +162,14 @@ function getCategoryPagesMenu(pageList,category,pageViewList){
 function getHeaderPagesMenu(pageList,pageViewList){
     pageList.forEach(element => {
         if(element.headerMenuView){
+            pageViewList.push(element)
+        }
+        return pageViewList
+    });
+}
+function getFooterWidgetPages(pageList,pageViewList){
+    pageList.forEach(element => {
+        if(element.footerWidget !=''){
             pageViewList.push(element)
         }
         return pageViewList

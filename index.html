@@ -333,10 +333,15 @@
                     <div class="navigation_column col25">
                         <h3>Support us</h3>
                         <ul>
-                            <li v-for="page in legalPagesMenu">
+                            <!-- pesante perchè comunque cicla tutti? -->
+                            <li v-for="page in footerWidgets" v-if="page.footerWidget==2">
                                 <i class="fas fa-chevron-right"></i>
                                 <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
+                            <!-- <li v-for="page in legalPagesMenu">
+                                <i class="fas fa-chevron-right"></i>
+                                <a :href="page.pageLink">{{page.pageName}}</a>
+                            </li> -->
                             <!-- <li>
                                 <i class="fas fa-chevron-right"></i>
                                 <a href="#">Privacy</a>
