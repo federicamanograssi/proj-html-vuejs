@@ -526,6 +526,11 @@ footer .navigation_section .navigation_column{
 .navigation_column li i{
     margin-right: 10px;
 }
+.navigation_column .menu_social li {
+    margin-right: 2px;
+    font-size: 1.2em;
+}
+
 
 
 

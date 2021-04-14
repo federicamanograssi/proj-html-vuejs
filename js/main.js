@@ -26,7 +26,7 @@ var app = new Vue({
                 {
                     socialName:'facebook',
                     socialLink:'#',
-                    socialIcon:'fab fa-facebook-square"'
+                    socialIcon:'fab fa-facebook-square'
                 },
                 {
                     socialName:'instagram',
@@ -43,135 +43,174 @@ var app = new Vue({
                 pageName: 'Privacy',
                 pageLink:'#',
                 pageCategory:'legal',
-                headerMenuView:false,
-                 // TENTATIVO 01
-                pageMenuView: true,
-                 // TENTATIVO 02
-                footerWidget: 2
+                headerMenu:false,
+                footerWidget: [2,5]
             },
             {
                 pageName: 'Terms',
                 pageLink:'#',
                 pageCategory:'legal',
-                headerMenuView:false,
-                // TENTATIVO 01
-                pageMenuView: true,
-                 // TENTATIVO 02
-                footerWidget: 2
+                headerMenu:false,
+                footerWidget: [2,5]
 
             },
             {
                 pageName: 'Cookie Policy',
                 pageLink:'#',
                 pageCategory: 'legal',
-                headerMenuView:false,
-                // TENTATIVO 01
-                pageMenuView: true,
-                 // TENTATIVO 02
-                footerWidget: 3
+                headerMenu:false,
+                footerWidget: [2,5]
 
             },
             {
                 pageName: 'Sitemap',
                 pageLink:'#',
                 pageCategory: 'legal',
-                headerMenuView:false,
-                // TENTATIVO 01
-                pageMenuView: true,
-                 // TENTATIVO 02
-                footerWidget: ''
-
+                headerMenu:false,
+                footerWidget: [2,5]
             },
             {
                 pageName: 'Home',
                 pageLink:'#',
                 pageCategory: 'general',
-                headerMenuView:true,
-                // TENTATIVO 01
-                pageMenuView: true,
-                // TENTATIVO 02
+                headerMenu:true,
                 footerWidget: ''
             },
             {
                 pageName: 'About',
                 pageLink:'#',
                 pageCategory: 'general',
-                headerMenuView:true,
-                // TENTATIVO 01
-                pageMenuView: true,
-                // TENTATIVO 02
+                headerMenu:true,
                 footerWidget: ''
             },
             {
                 pageName: 'Academics',
                 pageLink:'#',
-                pageCategory: 'general',
-                headerMenuView:true,
-                // TENTATIVO 01
-                pageMenuView: true,
-                // TENTATIVO 02
+                pageCategory: 'courses',
+                headerMenu:true,
                 footerWidget: ''
             },
             {
                 pageName: 'Courses',
                 pageLink:'#',
-                pageCategory: 'general',
-                headerMenuView:true,
-                // TENTATIVO 01
-                pageMenuView: true,
-                // TENTATIVO 02
+                pageCategory: 'courses',
+                headerMenu:true,
                 footerWidget: ''
             },
             {
                 pageName: 'News',
                 pageLink:'#',
-                pageCategory: 'general',
-                headerMenuView:true,
-                // TENTATIVO 01
-                pageMenuView: true,
-                // TENTATIVO 02
+                pageCategory: 'blog',
+                headerMenu:true,
                 footerWidget: ''
+            },
+            {
+                pageName: 'accomodation',
+                pageLink:'#',
+                pageCategory: 'info',
+                headerMenu:false,
+                footerWidget: '3'
+            },
+            {
+                pageName: 'arts academics',
+                pageLink:'#',
+                pageCategory: 'info',
+                headerMenu:false,
+                footerWidget: '3'
+            },
+            {
+                pageName: 'central services',
+                pageLink:'#',
+                pageCategory: 'info',
+                headerMenu:false,
+                footerWidget: '3'
+            },
+            {
+                pageName: 'conferences and events',
+                pageLink:'#',
+                pageCategory: 'event',
+                headerMenu:false,
+                footerWidget: '3'
+            },
+            {
+                pageName: 'food and drink',
+                pageLink:'#',
+                pageCategory: 'info',
+                headerMenu:false,
+                footerWidget: '3'
+            },
+            {
+                pageName: 'admission',
+                pageLink:'#',
+                pageCategory: 'utilities',
+                headerMenu:false,
+                footerWidget: '4'
+            },
+            {
+                pageName: 'contact us',
+                pageLink:'#',
+                pageCategory: 'utilities',
+                headerMenu:false,
+                footerWidget: '4'
+            },
+            {
+                pageName: 'FAQs',
+                pageLink:'#',
+                pageCategory: 'utilities',
+                headerMenu:false,
+                footerWidget: '4'
+            },
+            {
+                pageName: 'request information',
+                pageLink:'#',
+                pageCategory: 'utilities',
+                headerMenu:false,
+                footerWidget: '4'
+            },
+            {
+                pageName: 'privacy notice',
+                pageLink:'#',
+                pageCategory: 'utilities',
+                headerMenu:false,
+                footerWidget: '4'
             },
 
         ],
-        headerPagesMenu:[],
-        footerWidgets:[],
-        legalPagesMenu:[]
-    },
-    created(){
-        getHeaderPagesMenu(this.pagesList,this.headerPagesMenu)
-
-        // // per tentativo 01
-        getCategoryPagesMenu(this.pagesList,'legal',this.legalPagesMenu)  
         
-        //per tentativo 2
-        getFooterWidgetPages(this.pagesList,this.footerWidgets)
-
+    },
+    methods:{
+        getFooterWidgetPages(widgetNumber){
+            let widgetPages=[];
+        
+            this.pagesList.forEach(element => {
+                if(element.footerWidget.includes(widgetNumber) ){
+                    widgetPages.push(element)
+                }
+                return widgetPages
+            });
+            return widgetPages
+        },
+        getHeaderPagesMenu(){
+            let headerMenuList=[];
+        
+            this.pagesList.forEach(element => {
+                if(element.headerMenu){
+                    headerMenuList.push(element)
+                }
+                return headerMenuList
+            });
+            return headerMenuList
+        },
+        getCategoryPages(category){
+            let listByCategory =[];
+            this.pagesList.forEach(element=>{
+                if(element.pageCategory==category){
+                    listByCategory.push(element)
+                }
+                return listByCategory
+            });
+            return listByCategory
+        }
     }
     
 })
-
-function getCategoryPagesMenu(pageList,category,pageViewList){
-    pageList.forEach(element => {
-        if(element.pageCategory==category && element.pageMenuView){
-            pageViewList.push(element)
-        }
-        return pageViewList
-    });
-}
-function getHeaderPagesMenu(pageList,pageViewList){
-    pageList.forEach(element => {
-        if(element.headerMenuView){
-            pageViewList.push(element)
-        }
-        return pageViewList
-    });
-}
-function getFooterWidgetPages(pageList,pageViewList){
-    pageList.forEach(element => {
-        if(element.footerWidget !=''){
-            pageViewList.push(element)
-        }
-        return pageViewList
-    });
-}

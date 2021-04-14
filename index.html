@@ -29,7 +29,7 @@
                 </div>
                 <div class="header_menu flex">
                     <ul class="menu_inline flex">
-                        <li v-for="page in headerPagesMenu">{{page.pageName}}</li>
+                        <li v-for="page in getHeaderPagesMenu()">{{page.pageName}}</li>
                         
                     </ul>
                 </div>
@@ -315,7 +315,6 @@
                     <div class="navigation_column col25">
                         <h3>Contact us</h3>
                         <ul>
-                            
                             <li>
                                 <i :class="mainContacts.address.relatedIcon"></i>
                                 <a :href="mainContacts.address.link">{{mainContacts.address.text}}</a>
@@ -328,85 +327,43 @@
                                 <i :class="mainContacts.email.relatedIcon"></i>
                                 <a :href="mainContacts.email.link">{{mainContacts.email.text}}</a>
                             </li>
+
+                            <!-- lista icone social -->
+                            <li>
+                                <ul class="menu_inline menu_social">
+                                    <li v-for="social in mainContacts.socials">
+                                        <i :class="social.socialIcon"></i>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="navigation_column col25">
                         <h3>Support us</h3>
                         <ul>
                             <!-- pesante perchè comunque cicla tutti? -->
-                            <li v-for="page in footerWidgets" v-if="page.footerWidget==2">
+                            <li v-for="page in getFooterWidgetPages(2)">
                                 <i class="fas fa-chevron-right"></i>
                                 <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
-                            <!-- <li v-for="page in legalPagesMenu">
-                                <i class="fas fa-chevron-right"></i>
-                                <a :href="page.pageLink">{{page.pageName}}</a>
-                            </li> -->
-                            <!-- <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Privacy</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Terms</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Cookie Policy</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Sitemap</a>
-                            </li> -->
+                            
                         </ul>
                     </div>
                     <div class="navigation_column col25">
                         <h3>Explore</h3>
                         <ul>
-                            <li>
+                            <li v-for="page in getFooterWidgetPages(3)">
                                 <i class="fas fa-chevron-right"></i>
-                                <a href="#">Accomodation</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Arts Academics</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">Central services</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">conferences and events</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">food and drink</a>
+                                <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
                         </ul>
                     </div>
                     <div class="navigation_column col25">
                         <h3>Visit</h3>
                         <ul>
-                            <li>
+                            <li v-for="page in getFooterWidgetPages(4)">
                                 <i class="fas fa-chevron-right"></i>
-                                <a href="#">admission</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">contact us</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">FAQs</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">request information</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="#">privacy notice</a>
+                                <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
                         </ul>
                     </div>
@@ -421,7 +378,7 @@
                     </div>
                     <div class="right-footer">
                         <ul class="menu_inline capitalize">
-                            <li v-for="page in legalPagesMenu">
+                            <li v-for="page in getFooterWidgetPages(5)">
                                 <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
                         </ul>
