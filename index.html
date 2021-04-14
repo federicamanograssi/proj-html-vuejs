@@ -12,414 +12,420 @@
     <!-- ---FONT AWESOME--- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
+    <!-- ---JS -- -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- ---MY STYLE-- -->
     <link rel="stylesheet" href="css/style.css">
     <title>Academy Project</title>
 </head>
 <body class="">
-    
-    <!-- HEADER--------------- -->
-    <header>
-        <div class="top-header wrapped-container flex">
-            <div>
-                <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
-            </div>
-            <div class="header_menu flex">
-                <ul class="menu_inline flex">
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    
-    <!-- MAIN------------- -->
-    <main>
-
-        <!-- JUMBO SECTION-------------- -->
-        <div class="jumbo_section vh100">
-            <div class="text-center">
-                <h2 class="capitalize">Professional Development for coaches and leaders</h2>
-                <button>Learn more</button>
-            </div>
-        </div>
+    <div id="root">
         
-        <!-- ABOUT SECTION----------------- -->
-        <div class="wrapped-container">
-            <h3 class="text-center">
-                Since 2000, we've been partnering with education leaders to <span class="text-red">increase equity and achievement</span> for all students.
-            </h3>
-
-            <!-- CARD INFO RAW--- -->
-            <div class="card-info_row flex">
-                <div class="col33">
-                    <div class="card-info flex box-shadow">
-                        <img src="media/svg/svg-0.svg" alt="">
-                        <h3>online coaching</h3>
-                        <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="card-info flex box-shadow">
-                        <img src="media/svg/svg-0.svg" alt="">
-                        <h3>online coaching</h3>
-                        <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="card-info flex box-shadow">
-                        <img src="media/svg/svg-0.svg" alt="">
-                        <h3>online coaching</h3>
-                        <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- COUNTER RAW--- -->
-            <div class="counter_row flex">
-                <div class="col33">
-                    <div class="counter_info flex">
-                        <h2>
-                            <span class="text-orange">6500 +</span> 
-                        </h2>
-                        <p> students</p> 
-                        <img src="media/img/counter-shape-1-1-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="counter_info flex">
-                        <h2>
-                            <span class="text-red">200 +</span> 
-                        </h2>
-                        <p> online courses</p> 
-                        <img src="media/img/counter-shape-2-1-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="counter_info flex">
-                        <h2>
-                            <span class="text-green">100 %</span> 
-                        </h2>
-                        <p> happy clients</p> 
-                        <img src="media/img/counter-shape-3-1-1.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    
-        <!-- COURSE SECTION------------------- -->
-        <div class="wrapped-container">
-            <div class="text-center">
-                <h2>Recent Courses</h2>
-                <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
-            </div>
-
-            <!-- COURSES ROW--- -->
-            <div class="courses_row flex">
-                <div class="col33">
-                    <div class="card_course flex box-shadow">
-                        <div class="card_course-cover">
-                            <img src="media/img/bruce-mars-FWVMhUa_wbY-unsplash.jpg" alt="UI Animation">
-                        </div>
-                        
-                        <div class="card_course-details">
-                            <h4>Free</h4>
-                            <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                            <p>This online photography course will teach you how to take amazing images and even sell...</p>
-                            <p class="caption">Course by : University</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="card_course flex box-shadow">
-                        <div class="card_course-cover">
-                            <img src="media/img/course-1-2.jpg" alt="Drawing Course">
-                        </div>
-                        
-                        <div class="card_course-details">
-                            <h4>Free</h4>
-                            <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                            <p>This online photography course will teach you how to take amazing images and even sell...</p>
-                            <p class="caption">Course by : University</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="card_course flex box-shadow">
-                        <div class="card_course-cover">
-                            <img src="media/img/william-thomas-ny6tO4ItOEY-unsplash.jpg" alt="Guide to Photography">
-                        </div>
-                        
-                        <div class="card_course-details">
-                            <h4>Free</h4>
-                            <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                            <p>This online photography course will teach you how to take amazing images and even sell...</p>
-                            <p class="caption">Course by : University</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- QUOTE SECTION-------------- -->
-        <div class="quote_section wrapped-container">
-            <p class="text-center">
-                "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline">advisors, professors, and staff</span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline">@academics</span> abilities.</strong>"
-            </p>
-        </div>
-    
-        <!-- EVENTS--------------- -->
-        <div id="events_section" class="wrapped-container flex">
-            <div class="events-video">
-                <img src="media/img/video-bg-3.jpg" alt="">
-                <span><i class="fas fa-play"></i></span>
-            </div>
-            <div class="events-details box-shadow flex">
-                <div class="flex upcoming_events_label">
-                    <h2 class=" text-center">Upcoming events</h2>
-                </div>
+    <!-- HEADER--------------- -->
+        <header>
+            <div class="top-header wrapped-container flex">
                 <div>
-                    <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
-                    <p class="caption"><a href="#">Learn more ></a></p>
+                    <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
                 </div>
-                <div>
-                    <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
-                    <p class="caption"><a href="#">Learn more ></a></p>
-                </div>
-                <div>
-                    <p class="caption text-center"><i class="far fa-map"></i><a href="#">Event Locations ></a></p>
-                </div>
-            </div>
-        </div>
-    
-        <!-- BLOG------------------ -->
-        <div class="wrapped-container">
-            <div class="text-center">
-                <h2 class="capitalize">latest From Our Blogs</h2>
-                <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
-            </div>
-
-            <div class="blog_row flex">
-                <div class="col33">
-                    <div class="card_blog flex box-shadow">
-                        <div class="card_blog-cover">
-                            <img src="media/img/news-3-2.jpg" alt="Peer pressure teens tackle inequality">
-                        </div>
+                <div class="header_menu flex">
+                    <ul class="menu_inline flex">
+                        <li v-for="page in headerPagesMenu">{{page.pageName}}</li>
                         
-                        <div class="card_blog-details">
-                            <div class="blog_info">
-                                <ul class="menu_inline">
-                                    <li><i class="far fa-user"></i>Admin</li>
-                                    <li><i class="far fa-folder"></i>University</li>
-                                </ul>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <!-- MAIN------------- -->
+        <main>
+    
+            <!-- JUMBO SECTION-------------- -->
+            <div class="jumbo_section vh100">
+                <div class="text-center">
+                    <h2 class="capitalize">Professional Development for coaches and leaders</h2>
+                    <button>Learn more</button>
+                </div>
+            </div>
+            
+            <!-- ABOUT SECTION----------------- -->
+            <div class="wrapped-container">
+                <h3 class="text-center">
+                    Since 2000, we've been partnering with education leaders to <span class="text-red">increase equity and achievement</span> for all students.
+                </h3>
+    
+                <!-- CARD INFO RAW--- -->
+                <div class="card-info_row flex">
+                    <div class="col33">
+                        <div class="card-info flex box-shadow">
+                            <img src="media/svg/svg-0.svg" alt="">
+                            <h3>online coaching</h3>
+                            <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="card-info flex box-shadow">
+                            <img src="media/svg/svg-0.svg" alt="">
+                            <h3>online coaching</h3>
+                            <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="card-info flex box-shadow">
+                            <img src="media/svg/svg-0.svg" alt="">
+                            <h3>online coaching</h3>
+                            <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- COUNTER RAW--- -->
+                <div class="counter_row flex">
+                    <div class="col33">
+                        <div class="counter_info flex">
+                            <h2>
+                                <span class="text-orange">6500 +</span> 
+                            </h2>
+                            <p> students</p> 
+                            <img src="media/img/counter-shape-1-1-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="counter_info flex">
+                            <h2>
+                                <span class="text-red">200 +</span> 
+                            </h2>
+                            <p> online courses</p> 
+                            <img src="media/img/counter-shape-2-1-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="counter_info flex">
+                            <h2>
+                                <span class="text-green">100 %</span> 
+                            </h2>
+                            <p> happy clients</p> 
+                            <img src="media/img/counter-shape-3-1-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        
+            <!-- COURSE SECTION------------------- -->
+            <div class="wrapped-container">
+                <div class="text-center">
+                    <h2>Recent Courses</h2>
+                    <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
+                </div>
+    
+                <!-- COURSES ROW--- -->
+                <div class="courses_row flex">
+                    <div class="col33">
+                        <div class="card_course flex box-shadow">
+                            <div class="card_course-cover">
+                                <img src="media/img/bruce-mars-FWVMhUa_wbY-unsplash.jpg" alt="UI Animation">
                             </div>
-                            <h3>Peer pressure changes how teens tackle inequality</h3>
-                            <hr>
-                            <p class="caption"><a href="#">Read more ></a></p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col33">
-                    <div class="card_blog flex box-shadow">
-                        <div class="card_blog-cover">
-                            <img src="media/img/news-2-2.jpg" alt="Lewisham Live Mixtape">
-                        </div>
-                        
-                        <div class="card_blog-details">
-                            <div class="blog_info">
-                                <ul class="menu_inline">
-                                    <li><i class="far fa-user"></i>Admin</li>
-                                    <li><i class="far fa-folder"></i>Education</li>
-                                </ul>
+                            
+                            <div class="card_course-details">
+                                <h4>Free</h4>
+                                <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
+                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <p class="caption">Course by : University</p>
                             </div>
-                            <h3>Lewisham Live Mixtape celebrates borough’s</h3>
-                            <hr>
-                            <p class="caption"><a href="#">Read more ></a></p>
+                            
                         </div>
                     </div>
-                </div>
-                <div class="col33">
-                    <div class="card_blog flex box-shadow">
-                        <div class="card_blog-cover">
-                            <img src="media/img/news-1-2.jpg" alt="Turner Prize winner Film Festival">
-                        </div>
-                        
-                        <div class="card_blog-details">
-                            <div class="blog_info">
-                                <ul class="menu_inline">
-                                    <li><i class="far fa-user"></i>Admin</li>
-                                    <li><i class="far fa-folder"></i>University</li>
-                                </ul>
+                    <div class="col33">
+                        <div class="card_course flex box-shadow">
+                            <div class="card_course-cover">
+                                <img src="media/img/course-1-2.jpg" alt="Drawing Course">
                             </div>
-                            <h3>Turner Prize winner’s work to open Gold on Film festival</h3>
-                            <hr>
-                            <p class="caption"><a href="#">Read more ></a></p>
+                            
+                            <div class="card_course-details">
+                                <h4>Free</h4>
+                                <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
+                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <p class="caption">Course by : University</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="card_course flex box-shadow">
+                            <div class="card_course-cover">
+                                <img src="media/img/william-thomas-ny6tO4ItOEY-unsplash.jpg" alt="Guide to Photography">
+                            </div>
+                            
+                            <div class="card_course-details">
+                                <h4>Free</h4>
+                                <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
+                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <p class="caption">Course by : University</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            <!-- QUOTE SECTION-------------- -->
+            <div class="quote_section wrapped-container">
+                <p class="text-center">
+                    "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline">advisors, professors, and staff</span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline">@academics</span> abilities.</strong>"
+                </p>
+            </div>
+        
+            <!-- EVENTS--------------- -->
+            <div id="events_section" class="wrapped-container flex">
+                <div class="events-video">
+                    <img src="media/img/video-bg-3.jpg" alt="">
+                    <span><i class="fas fa-play"></i></span>
+                </div>
+                <div class="events-details box-shadow flex">
+                    <div class="flex upcoming_events_label">
+                        <h2 class=" text-center">Upcoming events</h2>
+                    </div>
+                    <div>
+                        <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
+                        <p class="caption"><a href="#">Learn more ></a></p>
+                    </div>
+                    <div>
+                        <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
+                        <p class="caption"><a href="#">Learn more ></a></p>
+                    </div>
+                    <div>
+                        <p class="caption text-center"><i class="far fa-map"></i><a href="#">Event Locations ></a></p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- BLOG------------------ -->
+            <div class="wrapped-container">
+                <div class="text-center">
+                    <h2 class="capitalize">latest From Our Blogs</h2>
+                    <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
+                </div>
     
-        <!-- PHOTOS------------ -->
-        <div id="photos_section">
-            <div class="photos_row flex">
-                <div>
-                    <img src="media/img/gallery-3-3.jpg" alt="">
-                </div>
-                <div>
-                    <img src="media/img/news-3-2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="media/img/gallery-1-3.jpg" alt="">
-                </div>
-                <div>
-                    <img src="media/img/gallery-2-3.jpg" alt="">
-                </div>
-
-            </div>
-        </div>
-
-    </main>
-
-    <!-- FOOTER-------------------- -->
-    <footer>
-
-        <!-- TOP FOOTER---- -->
-        <div class="top-footer wrapped-container">
-
-            <!-- SUBSCRIBE SECTION------ -->
-            <div class="subscribe_section">
-                <div class="subscribe_box flex">
-                    <div class="subscribe_form flex">
-                        <input type="text" placeholder="Subscribe to our newsletter">
-                        <button type="submit">Register</button>
+                <div class="blog_row flex">
+                    <div class="col33">
+                        <div class="card_blog flex box-shadow">
+                            <div class="card_blog-cover">
+                                <img src="media/img/news-3-2.jpg" alt="Peer pressure teens tackle inequality">
+                            </div>
+                            
+                            <div class="card_blog-details">
+                                <div class="blog_info">
+                                    <ul class="menu_inline">
+                                        <li><i class="far fa-user"></i>Admin</li>
+                                        <li><i class="far fa-folder"></i>University</li>
+                                    </ul>
+                                </div>
+                                <h3>Peer pressure changes how teens tackle inequality</h3>
+                                <hr>
+                                <p class="caption"><a href="#">Read more ></a></p>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="insights_picwick">
-                        <p><span class="text-underline"><strong class="text-red">Insights is Picwik</strong></span> University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>
-                        <p class="caption"><a href="#">Take me there ></a></p>
+                    <div class="col33">
+                        <div class="card_blog flex box-shadow">
+                            <div class="card_blog-cover">
+                                <img src="media/img/news-2-2.jpg" alt="Lewisham Live Mixtape">
+                            </div>
+                            
+                            <div class="card_blog-details">
+                                <div class="blog_info">
+                                    <ul class="menu_inline">
+                                        <li><i class="far fa-user"></i>Admin</li>
+                                        <li><i class="far fa-folder"></i>Education</li>
+                                    </ul>
+                                </div>
+                                <h3>Lewisham Live Mixtape celebrates borough’s</h3>
+                                <hr>
+                                <p class="caption"><a href="#">Read more ></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col33">
+                        <div class="card_blog flex box-shadow">
+                            <div class="card_blog-cover">
+                                <img src="media/img/news-1-2.jpg" alt="Turner Prize winner Film Festival">
+                            </div>
+                            
+                            <div class="card_blog-details">
+                                <div class="blog_info">
+                                    <ul class="menu_inline">
+                                        <li><i class="far fa-user"></i>Admin</li>
+                                        <li><i class="far fa-folder"></i>University</li>
+                                    </ul>
+                                </div>
+                                <h3>Turner Prize winner’s work to open Gold on Film festival</h3>
+                                <hr>
+                                <p class="caption"><a href="#">Read more ></a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- NAVIGATION SECTION--- -->
-            <div class="navigation_section flex">
-                <div class="navigation_column col25">
-                    <h3>Contact us</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="#">900 Wood Street, MI
-                                New York 48607</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-square-alt"></i>
-                            <a href="#">+56 345 678 000-09</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="#">info@example.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation_column col25">
-                    <h3>Support us</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Privacy</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Terms</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Coolie Policy</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Sitemap</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation_column col25">
-                    <h3>Explore</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Accomodation</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Arts Academics</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">Central services</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">conferences and events</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">food and drink</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation_column col25">
-                    <h3>Visit</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">admission</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">contact us</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">FAQs</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">request information</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <a href="#">privacy notice</a>
-                        </li>
-                    </ul>
+        
+            <!-- PHOTOS------------ -->
+            <div id="photos_section">
+                <div class="photos_row flex">
+                    <div>
+                        <img src="media/img/gallery-3-3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="media/img/news-3-2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="media/img/gallery-1-3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="media/img/gallery-2-3.jpg" alt="">
+                    </div>
+    
                 </div>
             </div>
-        </div>
-
-        <!-- BOTTOM FOOTER---- -->
-        <div class="bottom-footer">
-            <div class="wrapped-container flex justify-between">
-                <div class="left_bottom-footer">
-                    <span>© Copyright 2020 tophive. All Rights Reserved.</span>
+    
+        </main>
+    
+        <!-- FOOTER-------------------- -->
+        <footer>
+    
+            <!-- TOP FOOTER---- -->
+            <div class="top-footer wrapped-container">
+    
+                <!-- SUBSCRIBE SECTION------ -->
+                <div class="subscribe_section">
+                    <div class="subscribe_box flex">
+                        <div class="subscribe_form flex">
+                            <input type="text" placeholder="Subscribe to our newsletter">
+                            <button type="submit">Register</button>
+                        </div>
+                        <div class="insights_picwick">
+                            <p><span class="text-underline"><strong class="text-red">Insights is Picwik</strong></span> University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>
+                            <p class="caption"><a href="#">Take me there ></a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="right-footer">
-                    <ul class="menu_inline capitalize">
-                        <li>privacy</li>
-                        <li>terms</li>
-                        <li>cookie policy</li>
-                        <li>sitemap</li>
-                    </ul>
+    
+    
+                <!-- NAVIGATION SECTION--- -->
+                <div class="navigation_section flex">
+                    <div class="navigation_column col25">
+                        <h3>Contact us</h3>
+                        <ul>
+                            
+                            <li>
+                                <i :class="mainContacts.address.relatedIcon"></i>
+                                <a :href="mainContacts.address.link">{{mainContacts.address.text}}</a>
+                            </li>
+                            <li>
+                                <i :class="mainContacts.phone.relatedIcon"></i>
+                                <a :href="mainContacts.phone.link">{{mainContacts.phone.text}}</a>
+                            </li>
+                            <li>
+                                <i :class="mainContacts.email.relatedIcon"></i>
+                                <a :href="mainContacts.email.link">{{mainContacts.email.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation_column col25">
+                        <h3>Support us</h3>
+                        <ul>
+                            <li v-for="page in legalPagesMenu">
+                                <i class="fas fa-chevron-right"></i>
+                                <a :href="page.pageLink">{{page.pageName}}</a>
+                            </li>
+                            <!-- <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Privacy</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Terms</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Sitemap</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="navigation_column col25">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Accomodation</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Arts Academics</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">Central services</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">conferences and events</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">food and drink</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation_column col25">
+                        <h3>Visit</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">admission</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">contact us</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">request information</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="#">privacy notice</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+    
+            <!-- BOTTOM FOOTER---- -->
+            <div class="bottom-footer">
+                <div class="wrapped-container flex justify-between">
+                    <div class="left_bottom-footer">
+                        <span>© Copyright 2020 tophive. All Rights Reserved.</span>
+                    </div>
+                    <div class="right-footer">
+                        <ul class="menu_inline capitalize">
+                            <li v-for="page in legalPagesMenu">
+                                <a :href="page.pageLink">{{page.pageName}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 
 
     <script src="js/main.js"></script>

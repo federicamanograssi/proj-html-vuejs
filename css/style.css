@@ -521,6 +521,7 @@ footer .navigation_section .navigation_column{
 }
 .navigation_column li{
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 .navigation_column li i{
     margin-right: 10px;
