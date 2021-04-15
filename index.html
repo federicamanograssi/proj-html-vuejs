@@ -8,6 +8,8 @@
     <!-- ---TYPHOGRAPHY FONTS--- -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <!-- ---FONT AWESOME--- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -23,40 +25,42 @@
         
     <!-- HEADER--------------- -->
         <header>
-            <div class="top-header wrapped-container flex">
-                <div>
-                    <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
+            <div class="top-header">
+                <div class="wrapped-container flex">
+                    <div>
+                        <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
+                    </div>
+                    <div class="header_menu flex">
+                        <ul class="menu_inline flex">
+                            <li v-for="page in getHeaderPagesMenu()">{{page.pageName}}</li>
+                            
+                        </ul>
+                    </div>
                 </div>
-                <div class="header_menu flex">
-                    <ul class="menu_inline flex">
-                        <li v-for="page in getHeaderPagesMenu()">{{page.pageName}}</li>
-                        
-                    </ul>
+            </div>
+            <div class="jumbo_section">
+                <div class="text-center">
+                    <h2 class="capitalize">Professional Development for coaches and leaders</h2>
+                    <button>Learn more</button>
                 </div>
             </div>
         </header>
         
         <!-- MAIN------------- -->
         <main>
-    
-            <!-- JUMBO SECTION-------------- -->
-            <div class="jumbo_section vh100">
-                <div class="text-center">
-                    <h2 class="capitalize">Professional Development for coaches and leaders</h2>
-                    <button>Learn more</button>
-                </div>
-            </div>
             
             <!-- ABOUT SECTION----------------- -->
-            <div class="wrapped-container">
-                <h3 class="text-center">
-                    Since 2000, we've been partnering with education leaders to <span class="text-red">increase equity and achievement</span> for all students.
-                </h3>
+            <section class="wrapped-container section">
+                <div>
+                    <h2 class="text-center section_title">
+                        Since 2000, we've been partnering with education leaders to <span class="text-red">increase equity and achievement</span> for all students.
+                    </h2>
+                </div>
     
                 <!-- CARD INFO RAW--- -->
                 <div class="card-info_row flex">
                     <div class="col33">
-                        <div class="card-info flex box-shadow">
+                        <div class="card-info flex box-shadow justify-between">
                             <img src="media/svg/svg-0.svg" alt="">
                             <h3>online coaching</h3>
                             <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
@@ -64,15 +68,15 @@
                     </div>
                     <div class="col33">
                         <div class="card-info flex box-shadow">
-                            <img src="media/svg/svg-0.svg" alt="">
-                            <h3>online coaching</h3>
+                            <img src="media/svg/svg-1.svg" alt="">
+                            <h3>Consultation</h3>
                             <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
                         </div>
                     </div>
                     <div class="col33">
                         <div class="card-info flex box-shadow">
-                            <img src="media/svg/svg-0.svg" alt="">
-                            <h3>online coaching</h3>
+                            <img src="media/svg/svg-2.svg" alt="">
+                            <h3>Life Programs</h3>
                             <p>Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys</p>
                         </div>
                     </div>
@@ -84,36 +88,36 @@
                         <div class="counter_info flex">
                             <h2>
                                 <span class="text-orange">6500 +</span> 
+                                <img src="media/img/counter-shape-1-1-1.png" alt="">
                             </h2>
                             <p> students</p> 
-                            <img src="media/img/counter-shape-1-1-1.png" alt="">
                         </div>
                     </div>
                     <div class="col33">
                         <div class="counter_info flex">
                             <h2>
                                 <span class="text-red">200 +</span> 
+                                <img src="media/img/counter-shape-2-1-1.png" alt="">
                             </h2>
                             <p> online courses</p> 
-                            <img src="media/img/counter-shape-2-1-1.png" alt="">
                         </div>
                     </div>
                     <div class="col33">
                         <div class="counter_info flex">
                             <h2>
                                 <span class="text-green">100 %</span> 
+                                <img src="media/img/counter-shape-3-1-1.png" alt="">
                             </h2>
                             <p> happy clients</p> 
-                            <img src="media/img/counter-shape-3-1-1.png" alt="">
                         </div>
                     </div>
                 </div>
     
-            </div>
+            </section>
         
             <!-- COURSE SECTION------------------- -->
-            <div class="wrapped-container">
-                <div class="text-center">
+            <section class="wrapped-container">
+                <div class="text-center section_title">
                     <h2>Recent Courses</h2>
                     <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
                 </div>
@@ -127,9 +131,9 @@
                             </div>
                             
                             <div class="card_course-details">
-                                <h4>Free</h4>
+                                <span class="card-course_price">Free</span>
                                 <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <p class="description">This online photography course will teach you how to take amazing images and even sell...</p>
                                 <p class="caption">Course by : University</p>
                             </div>
                             
@@ -142,9 +146,9 @@
                             </div>
                             
                             <div class="card_course-details">
-                                <h4>Free</h4>
-                                <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <span class="card-course_price">Free</span>
+                                <h3>The Ultimate Drawing Course - Beginner to Advanced</h3>
+                                <p class="description">This online photography course will teach you how to take amazing images and even sell...</p>
                                 <p class="caption">Course by : University</p>
                             </div>
                             
@@ -157,26 +161,26 @@
                             </div>
                             
                             <div class="card_course-details">
-                                <h4>Free</h4>
-                                <h3>UI Animation using Sketch 3, Principle App, and Flinto</h3>
-                                <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                                <span class="card-course_price">Free</span>
+                                <h3>Your Complete Guide to Photography</h3>
+                                <p class="description">This online photography course will teach you how to take amazing images and even sell...</p>
                                 <p class="caption">Course by : University</p>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         
             <!-- QUOTE SECTION-------------- -->
-            <div class="quote_section wrapped-container">
+            <section class="quote_section wrapped-container">
                 <p class="text-center">
-                    "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline">advisors, professors, and staff</span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline">@academics</span> abilities.</strong>"
+                    "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline"><a href="#">advisors, professors, and staff</a></span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline">@academics</span> abilities.</strong>"
                 </p>
-            </div>
+            </section>
         
             <!-- EVENTS--------------- -->
-            <div id="events_section" class="wrapped-container flex">
+            <section id="events_section" class="wrapped-container flex">
                 <div class="events-video">
                     <img src="media/img/video-bg-3.jpg" alt="">
                     <span><i class="fas fa-play"></i></span>
@@ -185,23 +189,39 @@
                     <div class="flex upcoming_events_label">
                         <h2 class=" text-center">Upcoming events</h2>
                     </div>
-                    <div>
-                        <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
-                        <p class="caption"><a href="#">Learn more ></a></p>
+                    <div class="single_event">
+                        <h3>Princeton offers admission information sessions and student-led tours to campus visitors</h3>
+                        <p class="caption">
+                            <a href="#">
+                                Learn more
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="single_event">
+                        <h3>Princeton offers admission information sessions and student-led tours to campus visitors</h3>
+                        <p class="caption">
+                            <a href="#">
+                                Learn more
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </p>
                     </div>
                     <div>
-                        <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
-                        <p class="caption"><a href="#">Learn more ></a></p>
-                    </div>
-                    <div>
-                        <p class="caption text-center"><i class="far fa-map"></i><a href="#">Event Locations ></a></p>
+                        <p class="caption text-center">
+                            <a href="#">
+                                <i class="far fa-map"></i>
+                                Event Locations
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </p>
                     </div>
                 </div>
-            </div>
+            </section>
         
             <!-- BLOG------------------ -->
-            <div class="wrapped-container">
-                <div class="text-center">
+            <section class="wrapped-container">
+                <div class="text-center section_title">
                     <h2 class="capitalize">latest From Our Blogs</h2>
                     <p>Whether you’re considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
                 </div>
@@ -266,10 +286,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         
             <!-- PHOTOS------------ -->
-            <div id="photos_section">
+            <section id="photos_section">
                 <div class="photos_row flex">
                     <div>
                         <img src="media/img/gallery-3-3.jpg" alt="">
@@ -285,7 +305,7 @@
                     </div>
     
                 </div>
-            </div>
+            </section>
     
         </main>
     
@@ -329,13 +349,13 @@
                             </li>
 
                             <!-- lista icone social -->
-                            <li>
+                            <!-- <li>
                                 <ul class="menu_inline menu_social">
                                     <li v-for="social in mainContacts.socials">
                                         <i :class="social.socialIcon"></i>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="navigation_column col25">
@@ -378,7 +398,7 @@
                     </div>
                     <div class="right-footer">
                         <ul class="menu_inline capitalize">
-                            <li v-for="page in getFooterWidgetPages(5)">
+                            <li v-for="page in getFooterWidgetPages('bottom_footer')">
                                 <a :href="page.pageLink">{{page.pageName}}</a>
                             </li>
                         </ul>

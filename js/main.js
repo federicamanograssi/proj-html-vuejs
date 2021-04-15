@@ -36,22 +36,38 @@ var app = new Vue({
             ]            
         },
 
-
-        // TENTATIVO 01 - PUSH IN ARRAY
         pagesList :[
             {
                 pageName: 'Privacy',
                 pageLink:'#',
                 pageCategory:'legal',
                 headerMenu:false,
-                footerWidget: [2,5]
+                footerWidget: [2,'bottom_footer'
+                    // {
+                    //     footerWidgetNumber:2,
+                    //     footerWidgetPosition:'2'
+                    // },
+                    // {
+                    //     footerWidgetNumber:'bottom_footer',
+                    //     footerWidgetPosition:'2'
+                    // }
+                ]
             },
             {
                 pageName: 'Terms',
                 pageLink:'#',
                 pageCategory:'legal',
                 headerMenu:false,
-                footerWidget: [2,5]
+                footerWidget: [2,'bottom_footer'
+                    // {
+                    //     footerWidgetNumber:2,
+                    //     footerWidgetPosition:'1'
+                    // },
+                    // {
+                    //     footerWidgetNumber:'bottom_footer',
+                    //     footerWidgetPosition:'1'
+                    // }
+                ]
 
             },
             {
@@ -59,7 +75,7 @@ var app = new Vue({
                 pageLink:'#',
                 pageCategory: 'legal',
                 headerMenu:false,
-                footerWidget: [2,5]
+                footerWidget: [2,'bottom_footer']
 
             },
             {
@@ -67,7 +83,7 @@ var app = new Vue({
                 pageLink:'#',
                 pageCategory: 'legal',
                 headerMenu:false,
-                footerWidget: [2,5]
+                footerWidget: [2,'bottom_footer']
             },
             {
                 pageName: 'Home',
@@ -179,6 +195,8 @@ var app = new Vue({
         
     },
     methods:{
+
+        // RIEMPIMENTO FOOTER WIDGET TRAMITE PROPRIETà AD HOC OGGETTO della PAGINA 
         getFooterWidgetPages(widgetNumber){
             let widgetPages=[];
         
@@ -188,6 +206,24 @@ var app = new Vue({
                 }
                 return widgetPages
             });
+
+            // PER ORDINARE A MIO PIACERE ALL'INTERNO DEL WIDGET
+            // this.pagesList.forEach(element => {
+            //         if(element.footerWidget != ''){
+            //             for( let i=0; i<element.footerWidget.length; i++){
+            //                 if(element.footerWidget[i].footerWidgetNumber == widgetNumber){
+            //                     widgetPages.push(element)
+            //                 }
+            //             }
+            //             return widgetPages
+            //         }
+            //         return widgetPages
+            //     });
+
+            // widgetPages.sort((a,b)=>{
+
+            //     return a.widgetIndex - b.widgetIndex
+            // })
             return widgetPages
         },
         getHeaderPagesMenu(){
@@ -201,16 +237,7 @@ var app = new Vue({
             });
             return headerMenuList
         },
-        getCategoryPages(category){
-            let listByCategory =[];
-            this.pagesList.forEach(element=>{
-                if(element.pageCategory==category){
-                    listByCategory.push(element)
-                }
-                return listByCategory
-            });
-            return listByCategory
-        }
+
     }
     
 })
