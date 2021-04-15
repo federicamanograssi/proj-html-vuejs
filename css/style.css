@@ -126,14 +126,17 @@ p{
     color:#d74d52
 }
 .text-orange{
-    color:orange
+    color:#f28202
 }
 .text-green{
-    color:green
+    color:#3adc79
 }
 a {
     text-decoration: none;
     color: inherit;
+}
+a:hover{
+    color:#d74d52 ;
 }
 
 
@@ -161,6 +164,9 @@ main section>div:not(:only-child){
 .justify-center{
     justify-content: center;
 }
+.align-center{
+    align-items: center;
+}
 
 .col33{
     width: 33.33%;
@@ -180,10 +186,14 @@ body {
     
 }
 
-button {
+.btn {
     background: transparent;
     text-transform: capitalize;
     border: 0;
+    padding:15px 40px
+}
+.btn:hover{
+    cursor: pointer;
 }
 
 ul.menu_inline li{
@@ -259,7 +269,6 @@ header .menu_inline{
 }
 .jumbo_section>div{
     width: 60%;
-    height: 50vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -271,12 +280,9 @@ header .menu_inline{
     font-size: 57px;
 
 }
-.jumbo_section button{
+.jumbo_section .btn{
     font-family:'Lato', sans-serif;
     font-size: 14px;
-    line-height: 50px;
-    padding: 0 40px;
-    text-transform: capitalize;
     border: 1px solid #193826;
     color: #193826;
 }
@@ -373,8 +379,7 @@ header .menu_inline{
 .card_course-details .card-course_price::after{
     position: absolute;
     content: '';
-    background-color: #d74d52;
-    opacity: 0.2;
+    background-color: #d74d5240;
     height: 9px;
     width: 110%;
     left: 0;
@@ -421,6 +426,9 @@ header .menu_inline{
     height: 530px;
     overflow: hidden;
     left: 50px
+}
+.events-video span{
+    cursor: pointer;
 }
 .events-details{
     position: relative;
@@ -559,6 +567,10 @@ footer {
     color:#a3b5ca;
     font-size: 14px;
     font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+footer a:hover{
+    color: white;
 }
 footer li{
     list-style: none;
@@ -594,13 +606,14 @@ footer .subscribe_form{
 }
 footer .subscribe_form input{
     height: 60px;
+}
+footer .subscribe_form input.insert_input{
     padding: 15px;
     width: 300px;
 }
-footer .subscribe_form button{
+footer .subscribe_form input.btn{
     background-color: #d74d52;
-    height: 60px;
-    padding: 23px 35px;
+    padding: 23px 30px;
     color: white;
 }
 
@@ -624,15 +637,15 @@ footer .navigation_section .navigation_column{
     margin-bottom: 15px;
     text-transform: capitalize;
     max-width: 70%;
+    transition: all 2000ms;
 }
 .navigation_column li i{
     margin-right: 10px;
 }
-.navigation_column .menu_social li {
-    margin-right: 2px;
-    font-size: 1.2em;
-}
 
+.navigation_column li :hover{
+    margin-left: 15px;
+}
 
 
 
@@ -644,4 +657,15 @@ footer .navigation_section .navigation_column{
    color:#a3b5ca;
    font-size: 13px;
    padding: 15px 0;
+}
+
+#back_to_top{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 70px;
+    right: 50px;
+    background-color: white;
+    color: #d74d52;
+    cursor: pointer;
 }

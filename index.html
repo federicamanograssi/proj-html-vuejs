@@ -28,12 +28,15 @@
             <div class="top-header">
                 <div class="wrapped-container flex">
                     <div>
-                        <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
+                        <a href="">
+                            <img class="logo_header" src="media/img/Logo.jpg" alt="logo Academy">
+                        </a>
+                        
+                            
                     </div>
                     <div class="header_menu flex">
                         <ul class="menu_inline flex">
-                            <li v-for="page in getHeaderPagesMenu()">{{page.pageName}}</li>
-                            
+                            <li v-for="page in getHeaderPagesMenu()"><a :href="page.pageLink">{{page.pageName}}</a></li>  
                         </ul>
                     </div>
                 </div>
@@ -41,7 +44,7 @@
             <div class="jumbo_section">
                 <div class="text-center">
                     <h2 class="capitalize">Professional Development for coaches and leaders</h2>
-                    <button>Learn more</button>
+                    <a class="btn" href="#">Learn more</a>
                 </div>
             </div>
         </header>
@@ -175,7 +178,7 @@
             <!-- QUOTE SECTION-------------- -->
             <section class="quote_section wrapped-container">
                 <p class="text-center">
-                    "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline"><a href="#">advisors, professors, and staff</a></span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline">@academics</span> abilities.</strong>"
+                    "Academics was committed to my success from the moment I attended an Open House. With the support of caring <span class="text-red text-underline"><a href="#">advisors, professors, and staff</a></span> i was able to thrive in courses, fain recognition through scholarships, and finish <strong>with confidence in my <span class="text-red text-underline"><a href="#">@academics</a></span> abilities.</strong>"
                 </p>
             </section>
         
@@ -319,8 +322,8 @@
                 <div class="subscribe_section">
                     <div class="subscribe_box flex">
                         <div class="subscribe_form flex">
-                            <input type="text" placeholder="Subscribe to our newsletter">
-                            <button type="submit">Register</button>
+                            <input type="text" placeholder="Subscribe to our newsletter" class="insert_input">
+                            <input type="submit" class="btn" value="Register"></input>
                         </div>
                         <div class="insights_picwick">
                             <p><span class="text-underline"><strong class="text-red">Insights is Picwik</strong></span> University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>
@@ -335,7 +338,14 @@
                     <div class="navigation_column col25">
                         <h3>Contact us</h3>
                         <ul>
-                            <li>
+                            <li v-for="contact in getContactWidget()">
+                                <a :href="contact.link">
+                                    <i :class="contact.relatedIcon"></i>
+                                    {{contact.text}}
+                                </a>
+                            </li>
+
+                            <!-- <li>
                                 <i :class="mainContacts.address.relatedIcon"></i>
                                 <a :href="mainContacts.address.link">{{mainContacts.address.text}}</a>
                             </li>
@@ -346,25 +356,18 @@
                             <li>
                                 <i :class="mainContacts.email.relatedIcon"></i>
                                 <a :href="mainContacts.email.link">{{mainContacts.email.text}}</a>
-                            </li>
-
-                            <!-- lista icone social -->
-                            <!-- <li>
-                                <ul class="menu_inline menu_social">
-                                    <li v-for="social in mainContacts.socials">
-                                        <i :class="social.socialIcon"></i>
-                                    </li>
-                                </ul>
                             </li> -->
+
                         </ul>
                     </div>
                     <div class="navigation_column col25">
                         <h3>Support us</h3>
                         <ul>
-                            <!-- pesante perchè comunque cicla tutti? -->
                             <li v-for="page in getFooterWidgetPages(2)">
-                                <i class="fas fa-chevron-right"></i>
-                                <a :href="page.pageLink">{{page.pageName}}</a>
+                                <a :href="page.pageLink">
+                                    <i class="fas fa-chevron-right"></i>
+                                    {{page.pageName}}
+                                </a>
                             </li>
                             
                         </ul>
@@ -373,8 +376,10 @@
                         <h3>Explore</h3>
                         <ul>
                             <li v-for="page in getFooterWidgetPages(3)">
-                                <i class="fas fa-chevron-right"></i>
-                                <a :href="page.pageLink">{{page.pageName}}</a>
+                                <a :href="page.pageLink">
+                                    <i class="fas fa-chevron-right"></i>
+                                    {{page.pageName}}
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -382,13 +387,19 @@
                         <h3>Visit</h3>
                         <ul>
                             <li v-for="page in getFooterWidgetPages(4)">
-                                <i class="fas fa-chevron-right"></i>
-                                <a :href="page.pageLink">{{page.pageName}}</a>
+                                <a :href="page.pageLink">
+                                    <i class="fas fa-chevron-right"></i>
+                                    {{page.pageName}}
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                
+                
             </div>
+
+
     
             <!-- BOTTOM FOOTER---- -->
             <div class="bottom-footer">
@@ -405,7 +416,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ON TOP BUTTON -->
+            <div id="back_to_top" class="flex justify-center align-center">
+                <i class="fas fa-arrow-up"></i>
+            </div>
         </footer>
+
     </div>
     
 
