@@ -322,8 +322,8 @@
                 <div class="subscribe_section">
                     <div class="subscribe_box flex">
                         <div class="subscribe_form flex">
-                            <input type="text" placeholder="Subscribe to our newsletter" class="insert_input">
-                            <input type="submit" class="btn" value="Register"></input>
+                            <input type="text" placeholder="Subscribe to our newsletter" class="insert_input" v-model="enteredEmail" @keyup.enter="sendSubscribtion">
+                            <input type="submit" class="btn" value="Register" @click="sendSubscribtion"></input>
                         </div>
                         <div class="insights_picwick">
                             <p><span class="text-underline"><strong class="text-red">Insights is Picwik</strong></span> University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>

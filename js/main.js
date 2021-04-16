@@ -268,6 +268,8 @@ var app = new Vue({
             },
 
         ],
+        enteredEmail:'',
+        subscribedEmails:[]
         
     },
     methods:{
@@ -320,6 +322,11 @@ var app = new Vue({
             })
             return contactWidgetList
         },
+
+        sendSubscribtion(){
+            this.subscribedEmails.push(this.enteredEmail);
+            this.enteredEmail=''
+        }
 
     }
     
